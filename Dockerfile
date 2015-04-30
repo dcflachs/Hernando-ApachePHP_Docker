@@ -23,6 +23,9 @@ CMD ["/sbin/my_init"]
 RUN apt-get update 
 RUN apt-get install -qy mc
 RUN apt-get install -qy tmux
+RUN apt-get install -qy unrar
+RUN apt-get install -qy libav-tools
+
 # Install proxy Dependencies
 RUN \
   apt-get update -q && \
