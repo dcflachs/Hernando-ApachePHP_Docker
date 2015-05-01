@@ -64,6 +64,14 @@ EXPOSE 80 443
 # The www directory and proxy config location
 VOLUME ["/config", "/web", "/logs"]
 
+
+# Add our crontab file
+ADD crons.conf /root/crons.conf
+# Use the crontab file
+
+
+
+
 # Add firstrun.sh to execute during container startup
 ADD firstrun.sh /etc/my_init.d/firstrun.sh
 RUN chmod +x /etc/my_init.d/firstrun.sh
