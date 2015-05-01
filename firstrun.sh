@@ -15,6 +15,7 @@ if [ -f /config/crons.conf ]; then
   cron
 else
   echo "Copying blank  Cron config file."
+  cp /root/crons.conf /config/crons.conf
   crontab /config/crons.conf
   cron
 fi
