@@ -35,6 +35,7 @@ RUN \
   rm -rf /var/lib/apt/lists/*
  
 RUN \
+  a2enmod rewrite && \
   service apache2 restart && \
   rm -R -f /var/www && \
   ln -s /web /var/www
