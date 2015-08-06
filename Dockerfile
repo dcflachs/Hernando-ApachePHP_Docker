@@ -1,5 +1,5 @@
 FROM phusion/baseimage:0.9.15
-MAINTAINER nando
+MAINTAINER dcflachs
 
 # Set correct environment variables
 ENV DEBIAN_FRONTEND noninteractive
@@ -68,7 +68,7 @@ VOLUME ["/config", "/web", "/logs"]
 
 
 # Add our crontab file
-ADD crons.conf /root/crons.conf
+#ADD crons.conf /root/crons.conf
 # Use the crontab file
 
 
